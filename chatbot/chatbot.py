@@ -111,6 +111,75 @@ faq_pairs = process_faqs(text)
 # Create vector database
 index, questions, faq_pairs = create_faq_index(faq_pairs)
 
+st.markdown("""
+    <style>
+        /* Set the main background color to teal */
+        body, .stApp {
+            background-color: #008080 !important;
+            color: white !important;
+        }
+        
+        /* Set the entire app background to teal */
+.stApp {
+    background-color: #008080 !important; /* Teal */
+}
+
+/* Ensure background behind input text area is also teal */
+div[data-testid="stTextInput"] {
+    background-color: #008080 !important; /* Teal */
+    border-radius: 5px;
+}
+
+/* Fix the chat input box at the bottom */
+div[data-baseweb="textarea"] {
+    background-color: #ffffff !important; /* White input field */
+    color: #000000 !important; /* Black text */
+    border-radius: 5px;
+}
+
+
+/* Ensure chat bubbles have background */
+.stChatMessage {
+    background-color: #f0f8ff !important; /* Light teal */
+    border-radius: 10px;
+    padding: 10px;
+}
+/* Set text color to black */
+.stApp, .stChatMessage, .stChatMessage p {
+    color: #000000 !important; /* Black text */
+}
+
+
+        /* Sidebar styling */
+        .stSidebar {
+            background-color: #f0f8ff !important;
+            color: #008080 !important;
+        }
+
+        /* Change text color in titles and headers */
+        .stApp h1, .stApp h2, .stApp h3, .stApp h4 {
+            color: #ffffff !important;  /* White text */
+        }
+
+        /* Button styling */
+        .stButton > button {
+            background-color: #ffffff !important;  /* White button */
+            color: #008080 !important;  /* Teal text */
+            border-radius: 10px;
+            border: none;
+            font-weight: bold;
+        }
+
+        /* Chat messages */
+        .stChatMessage {
+            background-color: #f0f8ff !important;  /* Light teal chat bubbles */
+            border-radius: 10px;
+            padding: 10px;
+            color: #008080 !important; /* Teal text */
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # Streamlit UI
 st.title("💬 Hirely - Job Application Chatbot")
 
